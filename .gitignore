@@ -1,0 +1,8 @@
+app/ignored/
+bin/
+incude/
+lib/
+
+__pycache__/
+*.py[cod]
+*$py.class
