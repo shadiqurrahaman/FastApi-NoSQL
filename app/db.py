@@ -14,6 +14,7 @@ BASE_DIR = pathlib.Path(__file__).parent
 CLUSTER_BUNDLE = str(BASE_DIR / "ignored" / 'connect.zip')
 load_dotenv()
 
+
 ASTRADB_CLINT_ID = os.environ.get('ASTRADB_CLINT_ID')
 ASTRADB_CLINT_SECRET = os.environ.get('ASTRADB_CLINT_SECRET')
 ASTRADB_TOKEN = os.environ.get('ASTRADB_TOKEN')

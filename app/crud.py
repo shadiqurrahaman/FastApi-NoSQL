@@ -11,12 +11,16 @@ sync_table(UniqueProduct)
 def create_entry(data:dict):
     return Products.create(**data)
 
+def get_all_product():
+    return Products
+
+def add_unique_event(data:dict):
+    product = create_entry(data)
+    unique_product= create_unique_entry(data)
+    return product,unique_product  
+    
 def create_unique_entry(data:dict):
     data['uuid'] = uuid.uuid1()
     return UniqueProduct.create(**data)
 
-def add_unique_entry(data:dict):
-    product = create_entry(data)
-    unique_product= create_unique_entry(data)
-    return product,unique_product    
 
