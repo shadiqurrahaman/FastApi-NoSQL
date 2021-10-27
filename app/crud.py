@@ -1,11 +1,10 @@
 import uuid
 from .models import Products,UniqueProduct
 from .db import get_session
-from cassandra.cqlengine.management import sync_table
 
-session = get_session()
-sync_table(Products)
-sync_table(UniqueProduct)
+# session = get_session()
+# sync_table(Products)
+# sync_table(UniqueProduct)
 
 
 def create_entry(data:dict):
