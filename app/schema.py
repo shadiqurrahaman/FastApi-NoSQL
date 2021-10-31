@@ -9,6 +9,10 @@ class ProductSchema(BaseModel):
     title:str
     age:str
 
+class UniqueProductschemaList(BaseModel):
+    name:Optional[str]
+    title:str
+
 class UniqueProductschema(BaseModel):
     name:Optional[str]
     title:str
@@ -16,7 +20,7 @@ class UniqueProductschema(BaseModel):
 
     @root_validator(pre=True)
     def create_time_from_uuid(cls,values):
-        values['created'] = uuid_time_to_python_datetime(values['uuid'].time).time
+        values['created'] = uuid_time_to_python_datetime(values['uuid'].time)
         return values
 
 
